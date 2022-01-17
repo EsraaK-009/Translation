@@ -1,10 +1,7 @@
 
-
 ![What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/0_NSxbYAwcC7Qzk7PP.jpg)
 
-Do you really understand Big O? If so, then this will refresh your understanding before an interview. If not, don’t worry — come and join us for some endeavors in computer science.
-
-هل تفهم الـ Big O حقًا؟ إن كنت تفهمها فهذا المقال سيجدد فهمك قبل أي مقابلة عمل. لو لم تسمع بها من قبل، لا تقلق. تعال و انضم إلينا ل في علوم الكمبيوتر.  
+هل تفهم الـ Big O حقًا؟ إن كنت تفهمها فهذا المقال سيجدد فهمك قبل أي مقابلة عمل. لو لم تسمع بها من قبل، لا تقلق. تعال و انضم إلينا لتعرف المزيد في علوم الحاسب.  
 
 إذا كنت قد درست بعض الدورات المتعلقة بالخوارزميات Algorithms فعلى الأغلب قد سمعت بمصطلح صيغة O الكبير **Big O notation**. لو لم تكن فعلت؛ في هذا المقال سنمر عليها و ننتقل إلى فهم أعمق لما تعنيه حقًا.  
 
@@ -75,9 +72,9 @@ SelectionSort(List) {
 إذا قمنا بحساب كل العمليات سيعطينا ذلك مجموعًا هندسيًا و مع بعض [رياضيات المرحلة الثانوية](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) سنجد أن الحلقة الداخلية تتكرر لمدة 1+2 … + n  مرة مما يساوي  n(n-1)/2 مرة. إذا قمنا بضرب ذلك سنتنهي بـ n²/2-n/2.
 
 
-عندما نحسب الـ Big O notation نهتم فقط بالأجزاء السائدة **dominant terms** و لا نهتم بالمعاملات، مثال: لن نهتم بالاثنين المجاورة لـ n سنهتم بأكبر جزء في المعادلة فقط، فسنأخذ n² أنه Big O. و نكتبها O(n²) الذي يُنطق كما وضحت سابقًا Big O squared.
+عندما نحسب الـ Big O notation نهتم فقط بالحدود السائدة **dominant terms** و لا نهتم بالمعاملات، مثال: لن نهتم بالاثنين المجاورة لـ n سنهتم بأكبر جزء في المعادلة فقط، فسنأخذ n² أنه Big O. و نكتبها O(n²) الذي يُنطق كما وضحت سابقًا Big O squared.
 
-الآن قد تتساءل، ما هو **_"الجزء السائد dominant term "_**؟ ولماذا لا نهتم بالمعاملات؟ لا تقلق، سنمر بهم واحدًا تلو الآخر. قد يكون من الصعب بعض الشيء فهمه في البداية، لكن كل ذلك سيكون منطقيًا عندما تقرأ القسم التالي.  
+الآن قد تتساءل، ما هو **_"الحد السائد dominant term "_**؟ ولماذا لا نهتم بالمعاملات؟ لا تقلق، سنمر بهم واحدًا تلو الآخر. قد يكون من الصعب بعض الشيء فهمه في البداية، لكن كل ذلك سيكون منطقيًا عندما تقرأ القسم التالي.  
 
 ### 2. التعريف المتفق عليه (الرسمي) للـ Big O notation
 
@@ -94,7 +91,7 @@ SelectionSort(List) {
 
 تزداد الأرقام بعد عدد من المربعات بزيادة أسية (تبعًا للدالة الأسية)، أليس كذلك؟ المنطق نفسه يسري على خوارزميات الحاسوب. إذا زادت الجهود المطلوبة لاكمال مهمة بطريقة أسية مع زيادة عدد المدخلات، يمكن أن تنتهي كبيرة للغاية حيث لا يستطيع الحاسوب (الموارد المتاحة عليه) اكمالها.  
 
-الآن ضعف 64 هو 4096. إذا أضفت هذا الرقم إلى 2⁶⁴ سيفقد أهميته و ينضم إلى الأرقام غير المؤثرة على هذا الرقم الكبير، لهذا السبب عندما نحلل معدل الزيادة/النمو نهتم فقط بالأجزاء السائدة dominant terms. و نظرًا لأننا نريد تحليل معدل الزيادة بالنسبة لحجم المدخلات، فالمعاملات التي تضاعف الرقم فقط بدلًا من الزيادة مع زيادة حجم المدخلات لا تحتوى على معلومات قد تساعدنا.  
+الآن ضعف 64 هو 4096. إذا أضفت هذا الرقم إلى 2⁶⁴ سيفقد أهميته و ينضم إلى الأرقام غير المؤثرة على هذا الرقم الكبير، لهذا السبب عندما نحلل معدل الزيادة/النمو نهتم فقط بالحدود السائدة dominant terms. و نظرًا لأننا نريد تحليل معدل الزيادة بالنسبة لحجم المدخلات، فالمعاملات التي تضاعف الرقم فقط بدلًا من الزيادة مع زيادة حجم المدخلات لا تحتوى على معلومات قد تساعدنا.  
 
 أدناه التعريف الرسمي للـ Big O:
 
@@ -177,7 +174,7 @@ O(2ⁿ) is more complex than O(n⁹⁹), but O(2ⁿ) is actually less complex th
 
 #### 5. مضروب العدد factorial أكثر تعقيدًا من الدالة الأسية
 إذا كنت مهتمًا بالاثبات، فيمكن القراءة عن [**دالة جاما Gamma function**](https://en.wikipedia.org/wiki/Gamma_function) فهي  [**تحليل مستمر analytic continuation**](https://en.wikipedia.org/wiki/Analytic_continuation) لمضروب عدد. الاثبات المختصر أن كل من المضروب و الدالة الأسية لهما نفس عدد المضاعفات لكن الأرقام في المضروب العددي تتزايد بينما تبقى ثابتة في الدالة الأسية. (بمعنى أن 2⁶⁴ مهما كان الرقم في الأس سنظل نضرب 2 * 2 * 2 *2 ... لكن في المضروب العددي  الأرقام المضروبة تتغير مثال: 64! = 64 * 63 * 62 * 61 ..) 
-#### 6. Multiplying terms
+#### 6. ضرب الحدود
 
 عند الضرب، سيكون التعقيد أكبر من الأصلي، لكن ليس أكبر من ما يعادل ضرب حد أكثر تعقيدًا، على سبيل المثال،  O(n * log(n)) أكثر تعقيدًا من O(n) لكن أقل تعقيدًا من  O(n²) لأن O(n²) = O(n * n) و n أكثر تعقيدًا من log(n).
 
@@ -206,84 +203,93 @@ O(2ⁿ) is more complex than O(n⁹⁹), but O(2ⁿ) is actually less complex th
 
 توضيح بصري للترتيب بالدلو Bucket sort 
 
-### 6. Best, Average, Worst, Expected Complexity
+### 6.التعقيد الأفضل، المتوسط، الأسوء، المتوقع Best, Average, Worst, Expected Complexity
 
-The complexity can also be analyzed as best case, worst case, average case and expected case.
+يمكننا أيضًا تحليل التعقيد عن طريق الحالة الأفضل و الحالة الأسوء و الحالة المتوسطة و الحالة المتوقعة.
 
-Let’s take **insertion sort,** for example. Insertion sort iterates through all the elements in the list. If the element is larger than its previous element, it inserts the element backwards until it is larger than the previous element.
+لنأخذ **الترتيب بالإدارج Insertion sort** كمثال، insertion sort يمر على كل العناصر في القائمة List، إذا كان العنصر أقل من العنصر السابق له، يضع العنصر في المكان الصحيح الذي يحقق شرط أن كل العناصر السابقة أصغر منه.
+
+في الصورة التالية، يمر بالرقم 6 أولًا فلا يجد قبلها ما هو أصغر أو أكبر، فينتقل إلى رقم 5 و يجد أنه أقل من سابقه فينقله و هكذا إلى أخر العناصر.
 
 ![](https://cdn-media-1.freecodecamp.org/images/0*C9ork5K0ay7_CLBv.gif)
 
-Insertion Sort Illustrated, Image from [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+الترتيب بالإدارج Insertion sort موضح، الصورة من: [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 
-If the array is initially sorted, no swap will be made. The algorithm will just iterate through the array once, which results a time complexity of O(n). Therefore, we would say that the **best-case** time complexity of insertion sort is O(n). A complexity of O(n) is also often called **linear complexity**.
+إذا كانت المصفوفة Array مرتبة بالفعل، فلن يتم اجراء أي مبادلة، بهذه الطريقة الخوارزمية سيمر/يلف عبر المصفوفة مرة واحدة فقط، مما ينتج عنه تعقيد O(n) و لأجل هذا نقول أن **الحالة الأفضل Best case** من التعقيد الزمني للـ  insertion sort تساوي O(n). في الأغلب يُطلق على تعقيد O(n) **تعقيد خطي linear complexity**. 
 
-Sometimes an algorithm just has bad luck. Quick sort, for example, will have to go through the list in O(n) time if the elements are sorted in the opposite order, but on average it sorts the array in O(n * log(n)) time. Generally, when we evaluate time complexity of an algorithm, we look at their **worst-case** performance. More on that and quick sort will be discussed in the next section as you read.
+في بعض الأوقات، الخوارزمية يكون حظها سيء! الترتيب السريع Quick sort على سبيل المثال سيضطر إلى الدوران في المصفوفة Array في وقت O(n) إذا كانت العناصر مرتبة ترتيب عكسي، لكن في الحالة المتوسطة Average case سيأخذ وقت  O(n * log(n)). بشكل عام عندما نقيم مستوى تعقيد أي خوارزمية ننظر إلى **الحالة الأسوء Worst case**. سيتم مناقشة quick sort أكثر في النقاط التالية. 
 
-The average case complexity describes the expected performance of the algorithm. Sometimes involves calculating the probability of each scenarios. It can get complicated to go into the details and therefore not discussed in this article. Below is a cheat-sheet on the time and space complexity of typical algorithms.
+تعقيد الحالة المتوسطة Average case يصف الأداء المُتوقع من الخوارزمية Algorithm. في بعض الأوقات يتضمن ذلك حساب احتمالية حدوث كل سيناريو. يمكن أن يتعقد الشرح عند الدخول في التفاصيل لذلك هذا المقال لا يناقش ذلك. بالأدنى cheat-sheet للتعقيد الزمني و المساحي لأكثر الخوارزميات المُستخدمة.  
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/0_XZsrnwao98R3dGTB.png)
 
-[Big O Cheatsheet](http://bigocheatsheet.com/) for Common Algorithms
+[Big O Cheatsheet](http://bigocheatsheet.com/) لأكثر الـ Algorithms استخدامًا
 
-> **Solution to Section 4 Question:**
+> **حل السؤال المذكور في النقطة الرابعة:**
+من خلال النظر إلى الدوال فقط يمكننا بسهولة ترتيب كثيرات الحدود من الأكثر تعقيدًا إلى الأقل باستخدام القاعدة رقم 3. حيث أن الجذر التربيعي لـ n ما هو إلا n أس 0.5.
 
-By inspecting the functions, we should be able to immediately rank the following polynomials from most complex to lease complex with rule 3. Where the square root of n is just n to the power of 0.5.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_RKlbisO36urUbi237TjyrQ.png)
 
-Then by applying rules 2 and 6, we will get the following. Base 3 log can be converted to base 2 with [**log base conversions**](http://home.windstream.net/okrebs/page57.html). Base 3 log still grows a little bit slower then base 2 logs, and therefore gets ranked after.
+ثم بتطبيق القاعدة 2 و 6 سوف نحصل على الأتي. الـ log ذا الأساس 3 يمكن تحويله لأساس 2 عن طريق [**log base conversions**](http://home.windstream.net/okrebs/page57.html). لكن الـ log ذا الأساس 3 ينمو بمقدار أبطأ قليلًا من الأساس 2. لذا يكون ترتيبه بعده (أقل في التعقيد من الأساس 2). 
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_6R1jrWMGXpKxBqtEre9q8Q.png)
 
-The rest may look a little bit tricky, but let’s try to unveil their true faces and see where we can put them.
+البقية يمكن أن يكون صعبًا بعض الشيء، لكن لنحاول تبسيطهم و كشفهم و نرى أين يمكننا وضعهم.
 
-First of all, 2 to the power of 2 to the power of n is greater than 2 to the power of n, and the +1 spices it up even more.
+مبدأيًا، 2 أس 2 أس n أكبر من 2 أس n و الواحد الزائد يزيد تعقيدها أكثر.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_eGLwpHDUJtr6CuALrpcQ2w.png)
 
-And then since we know 2 to the power of log(n) with based 2 is equal to n, we can convert the following. The log with 0.001 as exponent grows a little bit more than constants, but less than almost anything else.
+بعدها بما إننا نعلم أن 2 أس log(n) ذا أساس 2 تساوي n يمكننا القيام بالتحويلات في الجدول الموضح.
+
+الـ log ذا أس 0.001 ينمو أكثر بقليل من الأرقام الثابتة لكن أقل من تقريبًا كل شيء أخر.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_4yo7najRBY_OaTnDpT3cIg.png)
 
-The one with n to the power of log(log(n)) is actually a variation of the [**quasi-polynomial**](https://en.wikipedia.org/wiki/Time_complexity#Quasi-polynomial_time), which is greater than polynomial but less than exponential. Since log(n) grows slower than n, the complexity of it is a bit less. The one with the inverse log converges to constant, as 1/log(n) diverges to infinity.
+الحد الذي يحتوي على n أس log(log(n)) هو في الحقيقة شكل من أشكال [**quasi-polynomial**](https://en.wikipedia.org/wiki/Time_complexity#Quasi-polynomial_time) التي تكون أكثر تعقيدًا من كثيرات الحدود polynoimal لكن أقل من الدالة الأسية. و بما أن log(n) يزداد أبطأ من n فتعقيده أقل بنسبة صغيرة.
+
+الحد الذي يحتوى على مقلوب الـ log يقرب إلى أن يكون ثابت، لأن 1/log(n) تؤول إلى ما لا نهاية.  
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_ZYUCFuiSbOibqdSfmuwdvA.png)
 
-The factorials can be represented by multiplications, and thus can be converted to additions outside the logarithmic function. The “n choose 2” can be converted into a polynomial with a cubic term being the largest.
+المضروبات العددية factorials يمكن التعبير عنها عن طريق الضرب، و بالتالي يمكن تحويلها إلى جمع خارج الدالة اللوغارتيمية logarithmic function (استخدام الـ log مشهور جدًا عندما نحتاج تحويل عملية الضرب إلى جمع). 
+
+التعبير "n choose 2" (الثاني في الجدول) يمكن تحويله إلى كثيرة حدود و الحد التكعيبي يكون الأكثر تعقيدًا.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_cbrjlMGsWYCs36u831pLTA.png)
 
-And finally, we can rank the functions from the most complex to the least complex.
+و أخيرًا يمكننا ترتيب الدوال من الأكثر تعقيدًا إلى الأقل.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_NHVggTVMGjGOe7SxtSgIpQ.png)
 
-### Why BigO doesn’t matter
+### لماذا لا يهم الـBig O notation؟
 
-> **!!! — WARNING — !!!**  
+> **!!! — تحذير — !!!**  
 >   
-> Contents discussed here are generally **not accepted** by most programmers in the world. Discuss it **at your own risk** in an interview. People actually blogged about how they **failed** their Google interviews because they questioned the authority, like here.  
+> المحتوى الذي سيتم مناقشته في هذه النقطة بشكل عام **لا يُقبل** من معظم المبرمجين حول العالم. ناقشه **على مسئوليتك الخاصة** في أي مقابلة عمل. في الحقيقة دون بعض المبرمجين كيف **رُفضوا** في مقابلات جوجل لأنهم شككوا في أهمية Big O كما سنفعل الآن. 
 >   
-> **!!! — WARNING — !!!**
+> **!!! — تحذير — !!!**
 
-Since we have previously learned that the worst case time complexity for quick sort is O(n²), but O(n * log(n)) for merge sort, merge sort should be faster — right? Well you probably have guessed that the answer is false. The algorithms are just wired up in a way that makes quick sort the _“quick sort”_.
 
-To demonstrate, check out this [trinket.io](https://trinket.io/python/87a3166026) I made. It compares the time for quick sort and merge sort. I have only managed to test it on arrays with a length up to 10000, but as you can see so far, the time for merge sort grows faster than quick sort. Despite quick sort having a worse case complexity of O(n²), the likelihood of that is really low. When it comes to the increase in speed quick sort has over merge sort bounded by the O(n * log(n)) complexity, quick sort ends up with a better performance in average.
+نظرًا لأننا تعلمنا مسبقًا أن الحالة الأسوء worst case للـترتيب السريع quick sort تعقيد O(n²) و للـ merge sort تساوي O(n * log(n)) فبالتالي سيكون merge sort أسرع، أليس كذلك؟ حسنًا، ربما خمنت بالفعل أن الاجابة هي لا! لقد تم صنع الخوارزميات بالطريقة التي تجعل quick sort كما يقول اسمه حرفيًا "ترتيب سريع".  
+
+للتوضيح، اتبع هذا الرابط [trinket.io](https://trinket.io/python/87a3166026) يحتوى على برنامج كتبته للمقارنة بين quick sort و merge sort. لقد تمكنت فقط من اختباره على مصفوفات تحتوى على 10000 عنصر أو أقل، لكن كما ترى حتى الآن، وقت merge sort يزداد بطريقة أسرع من quick sort. بالرغم من أن quick sort يمتلك تعقيد O(n²) فإن احتمالية حدوث ذلك منخفضة جدًا. عندما يتعلق الأمر بالزيادة في السرعة، فـ quick sort يعطي أداء أفضل في متوسط الأوقات من merge sort المحدود بتعقيد  O(n * log(n)). 
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_UvDTlLjNnQurODtnCWjEJg.png)
 
-Time Comparison between Quick Sort & Merge Sort
+صورة توضح مقارنة للوقت بين quick sort و merge sort
 
-I have also made the below graph to compare the ratio between the time they take, as it is hard to see them at lower values. And as you can see, the percentage time taken for quick sort is in a descending order.
+لقد قمت أيضًا في عمل الرسم أدناه لمقارنة النسبة بين الوقت الذي يأخذه كل منهما، لأنه من الصعب تحديد الفرق باستخدام قيم صغيرة، كما ترى، النسبة المئوية للوقت المُستغرق في quick sort تقل (مرتبة تنازليًا). 
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/1_Zdm_8c-uU5941r7zJd4FPQ.png)
 
-Time Ratio between Quick Sort & Merge Sort
+صورة توضح النسبة الزمنية بين quick sort و merge sort
 
-The moral of the story is, Big O notation is only a mathematical analysis to provide a reference on the resources consumed by the algorithm. Practically, the results may be different. But it is generally a good practice trying to chop down the complexity of our algorithms, until we run into a case where we know what we are doing.
+المغزى من كل هذا أن Big O notation هو تحليل رياضي فقط لتوفير مرجع أو قيمة مقاربة للموارد التي سيتم استهلاكها عند تشغيل الAlgorithm. لكن عمليًا قد تكون النتائج مختلفة، لكنه في النهاية ممارسة جيدة لمحاولة توقع و تقليل مستوى تعقيد الخوارزميات التي نكتبها، حتى نصل إلى شيء جديد يُمكننا من معرفة ما نقوم به بالضبط.  
 
-### In the end…
+### في النهاية...
 
-I like coding, learning new things and sharing them with the community. If there is anything in which you are particularly interested, please let me know. I generally write on web design, software architecture, mathematics and data science. You can find some great articles I have written before if you are interested in any of the topics above.
+أنا أحب البرمجة و تعلم أشياء جديدة و مشاركتها مع الآخرين، إذا كان هناك شيء يهمك بشكل خاص و تريد معرفة المزيد عنه، أخبرني عنه. أكتب عن تصميم الويب و هندسة البرمجيات و الرياضيات و علوم البيانات. يمكنك ايجاد مقالات عظيمة آخرى كتبتها قبلًا إذا كنت مهتمًا بأي من المواضيع المذكورة.  
 
-Hope you have a great time learning computer science!!!
+أتمنى أن تستمتع بوقتك أثناء تعلم علوم الحاسب computer science!!! 
